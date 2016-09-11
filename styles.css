@@ -1,0 +1,17 @@
+#cartas{
+    width: 30%;    
+    margin-left: 20px;
+    
+}
+
+#buscador{
+    width: 20%;
+}
+
+#botonvermas{
+    margin: 20px 40%;
+}
+
+#cursor{
+    cursor: pointer;
+}

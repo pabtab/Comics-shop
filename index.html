@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+<script src="SHA1.js"></script>
+
+<script src="angular-local-storage.min.js"></script>
+
+<script src="controladores/script.js" type="text/javascript"></script>
+<script src="localStorage-service.js"></script>
+
+<script src="controladores/LoginCtrl.js" type="text/javascript"></script>
+<script src="controladores/RegistroCtrl.js" type="text/javascript"></script>
+<script src="controladores/ComicCtrl.js" type="text/javascript"></script>
+<script src="controladores/AddComicCtrl.js" type="text/javascript"></script>
+<script src="controladores/EditarComicCtrl.js" type="text/javascript"></script>
+
+
+
+<script>
+  $(document).ready(function() {
+    $('select').material_select();
+    $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 240
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+});
+
+
+
+  </script>
+</head>
+
+<body ng-app="tiendaComics" ng-controller="index">
+
+
+<nav class="navbar-material">
+  <div class="nav-wrapper">
+    <a href="#comics" class="brand-logo">Logo</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#comics">Comics</a></li>
+      <li><a href="#addComics">Agregar Comic </a></li>
+      <li><a href="#registro">Registro </a></li>
+      <li><a href="#login">{{menulogin}}</a></li>
+    </ul>
+
+    <ul class="side-nav" id="mobile-demo">
+      <li><a href="#comics">Comics</a></li>
+      <li><a href="#addComics">Agregar Comic </a></li>
+      <li><a href="#registro">Registro </a></li>
+      <li><a href="#login">{{menulogin}}</a></li>
+    </ul>
+  </div>
+</nav>
+
+<br/>
+<br/>
+
+<div ng-view></div>
+
+
+
+</body>
+</html>
+
+
